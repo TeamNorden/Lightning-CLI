@@ -1,0 +1,20 @@
+{
+  "name": "lightning-cli",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "license": "GNU GPL v2.0",
+  "scripts": {
+    "build": "tsc",
+    "start": "yarn run build && node lib/index.js"
+  },
+  "dependencies": {
+    "commander": "^9.0.0",
+    "prompts": "^2.4.2",
+    "yargs": "^17.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.16",
+    "@types/prompts": "^2.0.14",
+    "@types/yargs": "^17.0.8"
+  }
+}
