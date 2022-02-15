@@ -1,5 +1,6 @@
 {
   "name": "lightning-cli",
+  "description": "CLI Tool For The Lightning Framework!",
   "version": "0.1.0",
   "main": "lib/index.js",
   "license": "GNU GPLv3",
