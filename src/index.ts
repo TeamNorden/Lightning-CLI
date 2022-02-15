@@ -1,6 +1,6 @@
 import yargs from 'yargs'
 
-yargs.version('1.0.0')
+yargs.version('0.1.0')
 
 yargs
     .scriptName("bolt")
