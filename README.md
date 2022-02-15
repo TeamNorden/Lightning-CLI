@@ -1,1 +1,2 @@
-lightning-cli
+# Lightning-CLI
+## A CLI Tool For The Lightning Framework
