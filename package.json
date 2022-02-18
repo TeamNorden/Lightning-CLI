@@ -3,7 +3,7 @@
   "description": "CLI Tool For The Lightning Framework!",
   "version": "0.1.0",
   "main": "lib/index.js",
-  "license": "GNU GPLv3",
+  "license": "GNU GPL v3",
   "scripts": {
     "build": "tsc",
     "start": "yarn run build && node lib/index.js"
@@ -16,6 +16,7 @@
   "devDependencies": {
     "@types/node": "^17.0.16",
     "@types/prompts": "^2.0.14",
-    "@types/yargs": "^17.0.8"
+    "@types/yargs": "^17.0.8",
+    "type-fest": "^2.11.2"
   }
 }
