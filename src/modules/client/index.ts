@@ -1,10 +1,14 @@
-class BoltCLIClient {
-    public fileManager: {}
-    public prompter: {}
+import FileManager from '../file-manager'
+import Prompter from '../prompter'
+import { Class } from 'type-fest'
 
-    constructor(fileManager: {}, prompter: {}) {
-        this.fileManager = fileManager
-        this.prompter = prompter
+class BoltCLIClient {
+    public fileManager: FileManager
+    public prompter: Prompter
+
+    constructor(FileManagerClass: Class<FileManager>, PrompterClass: Class<Prompter>) {
+        this.fileManager = new FileManagerClass()
+        this.prompter = new PrompterClass()
     }
 
     start() {
