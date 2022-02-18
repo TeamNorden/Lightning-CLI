@@ -1,7 +1,7 @@
 import { CommandBuilder } from 'yargs'
 import process from 'process'
 import path from 'path'
-import Prompter from '../modules/prompter'
+import fs from 'fs'
 
 export const command = 'init'
 export const desc = 'Create a ltn-cli.ts file'
@@ -16,13 +16,13 @@ export const builder: CommandBuilder = {
 
 
 export const handler = async (argv: { dir: string }) => {
-    if (!argv.dir || argv.dir === '.') {
-        const options = await (new Prompter<'test'>([{
-            type: 'text',
-            name: 'test',
-            message: 'Type something'
-        }])).init()
+    const dirPath = path.join(process.cwd(), argv.dir)
 
-        console.log(options)
-    }
+    const filePath = path.join(dirPath, 'bolt-cli.ts')
+
+    if (fs.existsSync(filePath)) return console.log('file already exists')
+
+    fs.writeFileSync(filePath, '')
+
+    console.log('File made!')
 }
