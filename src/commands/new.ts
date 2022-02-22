@@ -4,17 +4,18 @@ import path from 'path'
 import fs from 'fs'
 import { client } from '../index'
 import Prompter from '../modules/prompter'
+import IConfig from '../typings/IConfig'
 
 export const command = 'new'
 export const desc = 'Create a new Lightning Project'
 
 
 export const handler = async () => {
-    const prompter = new Prompter()
+    const prompter = new Prompter<keyof IConfig>()
 
     await prompter.init([{
         type: 'text',
-        name: 'Project',
+        name: 'project',
         message: 'What do you want your project folder to be named? (type . for current directory as project)'
     }, {
         type: 'select',
