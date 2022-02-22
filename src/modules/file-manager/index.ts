@@ -1,7 +1,14 @@
 import fs from 'fs'
 import path from 'path'
+import IConfig from '../../typings/IConfig'
 
 class FileManager {
+    public config: Map<string, IConfig>
+
+    constructor(config: Map<string, IConfig>) {
+        this.config = config
+    }
+
     public createDir(rootPath: string, dirName: string) {
         const dirPath = path.join(rootPath, dirName)
 
