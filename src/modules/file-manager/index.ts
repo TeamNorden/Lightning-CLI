@@ -1,11 +1,11 @@
 import fs from 'fs'
 import path from 'path'
-import IConfig from '../../typings/IConfig'
+import ConfigMap from '../config-map'
 
 class FileManager {
-    public config: Map<string, IConfig>
+    public config = new ConfigMap()
 
-    constructor(config: Map<string, IConfig>) {
+    constructor(config: ConfigMap) {
         this.config = config
     }
 
