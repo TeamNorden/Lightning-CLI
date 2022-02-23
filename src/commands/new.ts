@@ -26,6 +26,18 @@ export const handler = async () => {
             title: 'Javascript',
             value: 'js'
         }]
+    }, {
+        type: 'select',
+        name: 'pkgManager',
+        message: 'What package manager are you using?',
+        choices: [{
+            title: 'npm',
+            value: 'npm',
+            selected: true
+        }, {
+            title: 'yarn',
+            value: 'yarn'
+        }]
     }])
 
     client.fileManager.config = prompter.config
