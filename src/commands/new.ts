@@ -1,10 +1,6 @@
-import { CommandBuilder } from 'yargs'
-import process from 'process'
-import path from 'path'
-import fs from 'fs'
 import { client } from '../index'
 import Prompter from '../modules/prompter'
-import IConfig from '../typings/IConfig'
+import { IConfig } from '../modules/config-map'
 
 export const command = 'new'
 export const desc = 'Create a new Lightning Project'
@@ -31,5 +27,5 @@ export const handler = async () => {
         }]
     }])
 
-    console.log(prompter.config)
+    client.fileManager.config = prompter.config
 }
