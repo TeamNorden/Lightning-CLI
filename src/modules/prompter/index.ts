@@ -1,8 +1,9 @@
 import prompts from 'prompts'
 import { string } from 'yargs'
+import ConfigMap, { IConfig } from '../config-map'
 
-class Prompter<TOptionNames extends string = string> {
-    public config = new Map<TOptionNames, unknown>()
+class Prompter<TOptionNames extends keyof IConfig = keyof IConfig> {
+    public config = new ConfigMap()
 
     public async input<T extends string = string>(questions: prompts.PromptObject<T>) {
         const res = await prompts<T>(questions)
