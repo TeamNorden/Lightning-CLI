@@ -1,4 +1,5 @@
-import yargs from 'yargs'
+#! /usr/bin/env node
+
 import BoltCLIClient from './modules/client'
 import Prompter from './modules/prompter'
 import FileManager from './modules/file-manager'
