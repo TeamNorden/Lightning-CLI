@@ -42,5 +42,5 @@ export const handler = async () => {
 
     client.fileManager.config = prompter.config
 
-    console.log(client.fileManager.config)
+    await client.fileManager.initProject()
 }
