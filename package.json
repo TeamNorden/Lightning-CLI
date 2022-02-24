@@ -3,6 +3,9 @@
   "description": "CLI Tool For The Lightning Framework!",
   "version": "0.1.0",
   "main": "lib/index.js",
+  "bin": {
+    "bolt": "lib/index.js"
+  },
   "license": "GNU GPL v3",
   "scripts": {
     "build": "tsc",
